@@ -1,9 +1,11 @@
 let invi1 = document.getElementById("invi1")
-let invi2s = document.getElementById("invi2")
+let invi2 = document.getElementById("invi2")
 let min = document.getElementById("min")
 let sec = document.getElementById("sec")
 let hour = document.getElementById("hour")
 let todayDate = document.getElementById("todayDate");
+
+
 
 let blinkInterval1;
 function toogle1(){
@@ -35,7 +37,6 @@ let blinkInterval3;
 function nowDateTime() {
 let now= new Date();
 console.log(now);
-todayDate.innerHTML= now;
 
 
 let seconds = now.getSeconds();
@@ -49,9 +50,18 @@ min.innerHTML=minutes;
 let hours = now.getHours();
 console.log(hours)
 hour.innerHTML=hours;
-}
-
-
 
 let day=now.getDay();
 console.log(day);
+
+weekTime(day)
+}
+
+function weekTime(day) {
+    for (let i = 0; i <= 6; i++) {
+        document.getElementById(`day${i}`).style.filter = "blur(4px)";
+    }
+
+    // Unblur today's day
+    document.getElementById(`day${day}`).style.filter = "blur(0px)";
+}

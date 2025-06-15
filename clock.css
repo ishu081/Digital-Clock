@@ -6,7 +6,7 @@
 
 
 .container{
-    margin: 17% 40%;
+    margin: 17% 35%;
     border-color: white;
     border-width: 1px;
     width: 30rem;
@@ -16,6 +16,7 @@
 }
 .weeks{
     filter: blur(2px);
+    
 }
 .time{
     margin: -2rem 3rem;
